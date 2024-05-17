@@ -1,0 +1,19 @@
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        ## service1
+#        - id: eureka-server
+#          uri: lb://eureka-server
+#          predicates:
+#            - Path=/eureka-server/**
+#          filters:
+#            - StripPrefix=1
+#
+#        ## Service2
+#        - id: service2
+#          uri: lb://service2
+#          predicates:
+#            - Path=/service2/**
+#          filters:
+#            - StripPrefix=1
